@@ -1,6 +1,7 @@
 var FastDancer = function(timeBetweenSteps) {
   Dancer.call(this, timeBetweenSteps);
-  this.$node = $('<span class="fast dancer"></span>');
+  //this.$node = $('<span class="fast dancer"></span>');
+  this.$node = $('<img class="fast dancer" src="images/sprites/flash.png" />')
 };
 
 FastDancer.prototype = Object.create(Dancer.prototype);

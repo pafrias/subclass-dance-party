@@ -3,35 +3,43 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton{/*differentiate? dance button borders rounded?*/
   padding:5px 12px;
   float:right;
 }
 .topbar{
-  height:32px;
+  height:50px;
   background-color: #555;
 }
 .title{
   background-color: #777;
 }
+
+.dance_floor{
+  height: 95%;
+  background-image: url("./images/dance_floors/retro-fever-dance-floor.png");
+}
 .dancer{
   position:absolute;
 }
 .blinky{
-  border:10px solid red;
-  border-radius:10px;
+  height: 110px;
+  width: 100px;
 }
 .fast{
-  border:10px solid blue;
-  border-radius:10px;
+  height: 120px;
+  width: 90px;
 }
 .punchy{
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
+}
+.spooky {
+  height: 100px;
+  width: 120px;
 }

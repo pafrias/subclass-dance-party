@@ -2,34 +2,30 @@ $(document).ready(function() {
   window.dancers = [];
 
   $('.addDancerButton').on('click', function(event) { 
-    /* This function sets up the click handlers for the create-dancer
-     * buttons on dancefloor.html. You should only need to make one small change to it.
-     * As long as the "data-dancer-maker-function-name" attribute of a
-     * class="addDancerButton" DOM node matches one of the names of the
-     * maker functions available in the global scope, clicking that node
-     * will call the function to make the dancer.
-     */
-
-    /* dancerMakerFunctionName is a string which must match
-     * one of the dancer maker functions available in global scope.
-     * A new object of the given type will be created and added
-     * to the stage.
-     */
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
-
     var dancer = new dancerMakerFunction(Math.random() * 1000);
     
+    dancer.setPosition();
     dancer.step();
-    dancer.setPosition($("body").height() * Math.random(), $("body").width() * Math.random());
+    
     
     window.dancers.push(dancer);
     
-    $('body').append(dancer.$node);
+    $('main').append(dancer.$node);
+    
+  });
+  
+  $('.lineDanceButton').on('click', function(event) { //multiple button clicks? toggle
+    window.dancers.forEach(function(dancer, index, col) {
+      var left = 200/*percent of main width*/ + (index * 900) / (col.length - 1);
+      var top = $('main').height() * .5;
+      dancer.$node.animate({ "left": left + "px", "top": top + "px"})
+      }) 
   });
 });
 
@@ -39,14 +35,24 @@ $(document).ready(function() {
 Things to-do:
   *Refactor into pseudo *
   Better background
+    *set a dancefloor div/main*
+    *has img*
+    have a margin
+    
   Make punchy dancer
-    Make punchy dancer button
-  *Make quick/shy dancer*
+    *set img(s)*
+    make animation
+    *Make punchy dancer button*
+  *Make quick dancer*
+    *set img(s)*
+    give smooth motion
+    don't escape the dino park
     *Make quick dancer button*
+  *Make spooky Dancer*
   Line up functionality
   Write tests
   
-  Doesn't dance on nav bar**
+  **Doesn't dance on nav bar**
   No collision**
   Lights**
   Unlineup functionality**

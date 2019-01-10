@@ -1,6 +1,7 @@
 var BlinkyDancer = function(timeBetweenSteps) {
   Dancer.call(this, timeBetweenSteps);
-  this.$node = $('<span class="blinky dancer"></span>');
+  this.$node = $('<span class="dancer"></span>');
+  this.$node.html('<img class="blinky" src="images/sprites/Abra.png"/>')
 };
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
@@ -8,8 +9,11 @@ BlinkyDancer.prototype = Object.create(Dancer.prototype);
 BlinkyDancer.prototype.constructor = BlinkyDancer;
 
 BlinkyDancer.prototype.step = function() {
-  this.startDance(this._speed);
-  this.$node.toggle();
+  this.startDance(this._speed * 3);
+  if (this.$node.css("display") === "none") {
+    this.setPosition();
+  }
+  this.$node.slideToggle("fast");
 };
 
 /*

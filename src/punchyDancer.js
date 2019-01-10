@@ -1,7 +1,8 @@
 var PunchyDancer = function(setTimeBetween) {
   Dancer.call(this, setTimeBetween);
-  this.$node = $('<span class="punchy dancer"></span>');
-  this.$node.css("background-image", "https://orig00.deviantart.net/59c4/f/2017/195/1/4/ryu_sprite_by_techm8-dbg740c.png");
+  //this.$node = $('<span class="punchy dancer"></span>');
+  this.$node = $('<img class="punchy dancer" src="images/sprites/ryu_sprite.png" />');
+  //this.$node.css("background-image", "https://orig00.deviantart.net/59c4/f/2017/195/1/4/ryu_sprite_by_techm8-dbg740c.png");
 };
 
 PunchyDancer.prototype = Object.create(Dancer.prototype);
