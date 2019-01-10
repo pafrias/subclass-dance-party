@@ -1,7 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
 
-  $('.addDancerButton').on('click', function(event) {
+  $('.addDancerButton').on('click', function(event) { 
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -27,10 +27,28 @@ $(document).ready(function() {
     dancer.step();
     dancer.setPosition($("body").height() * Math.random(), $("body").width() * Math.random());
     
-    // append dancer to dancers?
     window.dancers.push(dancer);
     
     $('body').append(dancer.$node);
   });
 });
 
+
+
+/*
+Things to-do:
+  *Refactor into pseudo *
+  Better background
+  Make punchy dancer
+    Make punchy dancer button
+  *Make quick/shy dancer*
+    *Make quick dancer button*
+  Line up functionality
+  Write tests
+  
+  Doesn't dance on nav bar**
+  No collision**
+  Lights**
+  Unlineup functionality**
+  Smooth movement or blink movement**
+*/
