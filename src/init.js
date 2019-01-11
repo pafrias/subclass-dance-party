@@ -13,7 +13,6 @@ $(document).ready(function() {
     dancer.setPosition();
     dancer.step();
     
-    
     window.dancers.push(dancer);
     
     $('main').append(dancer.$node);
@@ -27,6 +26,10 @@ $(document).ready(function() {
       dancer.$node.animate({ "left": left + "px", "top": top + "px"})
       }) 
   });
+  
+  /*$('.punchy').on('mouseover', function(event) {
+    $(this.nodeOrsomethinglikethat).mouseover();
+  })*/
 });
 
 
@@ -38,7 +41,16 @@ Things to-do:
     *set a dancefloor div/main*
     *has img*
     have a margin
-    
+  
+  maybe all dancers have a lineUp method?
+  
+  
+  *Make spooky Dancer*
+  Line up functionality
+    *make them line up*
+    *keep them there*
+  Write tests
+  
   Make punchy dancer
     *set img(s)*
     make animation
@@ -48,10 +60,6 @@ Things to-do:
     give smooth motion
     don't escape the dino park
     *Make quick dancer button*
-  *Make spooky Dancer*
-  Line up functionality
-  Write tests
-  
   **Doesn't dance on nav bar**
   No collision**
   Lights**

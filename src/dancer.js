@@ -1,7 +1,6 @@
 // Creates and returns a new dancer object that can step
 var Dancer = function(timeBetweenSteps) { 
   this._speed = timeBetweenSteps;
-  //dancer.setPosition($(".topbar").height() + ($("main").height() * Math.random()), $("main").width() * Math.random());
 
 };
 
