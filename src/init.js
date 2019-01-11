@@ -43,7 +43,7 @@ Things to-do:
     have a margin
   
   maybe all dancers have a lineUp method?
-  
+  *MOUSEOVER DONE*
   
   *Make spooky Dancer*
   Line up functionality
